@@ -7,7 +7,7 @@
   ]
 </script>
 
-<header class="px-6 flex items-center justify-between py-6 backdrop-blur-sm">
+<header class="px-6 flex items-center justify-between py-6 backdrop-blur-sm z-50">
   <h1 class="font-medium">
     <b class="font-bold poppins">Arek</b> Dawid
   </h1>
@@ -18,8 +18,7 @@
       </a>
     {/each}
   </div>
-  <a href="https://www.linkedin.com/in/adawid/" target="_blank" rel="noopener" class="blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950">
-    <div class="absolute top-0 right-full w-full h-full bg-sky-400 opacity-20 group-hover:translate-x-full z-0 duration-200"/>
+  <a href="https://www.linkedin.com/in/adawid/" target="_blank" rel="noopener" class="blueShadow antialiasing relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950 duration-300 hover:scale-[108%]">
     <h4 class="relative z-9">Get in touch</h4>
   </a>
 </header>

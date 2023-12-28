@@ -2,7 +2,7 @@
   export let step;
 </script>
 
-<a href={step.link} target="_blank" rel="noopener" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-sky-700 text-center group cursor-pointer hover:border-sky-400 duration-200">
+<a href={step.link} target="_blank" rel="noopener" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-sky-700 text-center group cursor-pointer hover:border-sky-400 duration-200 backdrop-blur-sm">
   <div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200">
     <i class={step.icon} />
   </div>
