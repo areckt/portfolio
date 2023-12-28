@@ -1,5 +1,11 @@
 <script>
+  import Step from "./Step.svelte";
 
+  let steps = [
+    {name: "HotPoll", icon: "fa-solid fa-fire", link: "https://github.com/areckt/HotPoll"},
+    {name: "React Course - 15 Projects", icon: "fa-brands fa-react", link: "https://github.com/areckt/React_Course_15_projects"},
+    {name: "3D Animation Test Tool", icon: "fa-solid fa-cube", link: "https://github.com/areckt/3D-Animation"}
+  ]
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -18,7 +24,7 @@
       </a>
     </div>
     <div class="relative shadow-2xl grid place-items-center">
-      <img src={"images/profile.png"} alt="Profile" class="object-cover z-[2] w-[50vmin]"/>
+      <img src={"images/profile.png"} alt="Profile" class="object-cover z-[2] w-[40vmin]"/>
     </div>
   </section>
   
@@ -32,5 +38,18 @@
       <i class="fa-regular fa-circle-play"></i>
       <p>Watch the video</p>
     </a>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+      <Step step={steps[0]}>
+        <p>Platform for hottest polls created in <strong class="text-violet-400">Java</strong> and <strong class="text-violet-400">React.js</strong>. HotPoll is a voting platform inspired by Reditt and Twitter. The main goal of this app is to quickly share polls all around the world. It also allows to vote and check whether your side of conflict is winning 😉</p>
+      </Step>
+      <Step step={steps[1]}>
+        <p>15 simple React projects based on a <a href="https://youtu.be/a_7Z7C_JCyo" target="_blank" rel="noopener" class="underline decoration-violet-400 hover:decoration-violet-300">
+          <strong class="text-violet-400 hover:text-violet-300">tutorial by John Smilga</strong>
+        </a></p>
+      </Step>
+      <Step step={steps[2]}>
+        <p>A tool for conducting performance tests of two libraries for 3D animation in browser-based GUIs: Three.js vs Babylon.js. Project created for my engineering thesis.</p>
+      </Step>
+    </div>
   </section>
 </main>
