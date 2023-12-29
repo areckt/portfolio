@@ -4,6 +4,7 @@
   let tabs = [
     {name: "Projects", link: "#projects"},
     {name: "About me", link: "#about"},
+    {name: "Artworks", link: "#artworks"},
   ]
 </script>
 
@@ -18,7 +19,7 @@
       </a>
     {/each}
   </div>
-  <a href="https://www.linkedin.com/in/adawid/" target="_blank" rel="noopener" class="blueShadow antialiasing relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950 duration-300 hover:scale-[108%]">
+  <a href="https://www.linkedin.com/in/adawid/" target="_blank" rel="noopener" class="blueShadow antialiasing relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950 duration-300 hover:scale-[108%] focus:ring-4 focus:ring-sky-700">
     <h4 class="relative z-9">Get in touch</h4>
   </a>
 </header>
