@@ -1,5 +1,6 @@
 <script>
   import Step from "./Step.svelte";
+  import ImageCard from "./ImageCard.svelte";
 
   let steps = [
     {name: "HotPoll", icon: "fa-solid fa-fire", link: "https://github.com/areckt/HotPoll"},
@@ -21,7 +22,7 @@
           {classes: "", text: ", which I also accomplished at a  swift pace and despite a few setbacks in the first weeks of work, after a few months I  became one of the most valuable employees of the company."},
         ],
         [
-          {classes: "", text: "After less than a year, I received a job offer for a European Union project at the  University of Warsaw, which I of course accepted. At UW, I continued to polish my  proficiency in "},
+          {classes: "", text: "After less than a year, I received a job offer for a European Union project at the  University of Warsaw, which I of course accepted. At UW, I continued to polish my proficiency in "},
           {classes: "font-semibold text-sky-400", text: "Vue.js"},
           {classes: "", text: " as well as pure "},
           {classes: "font-semibold text-sky-400", text: "JS"},
@@ -35,12 +36,12 @@
         ]
       ],
     },
-    { name: "a graduate of the best polish technical university", 
+    { name: "a graduate of the best Polish technical university", 
       description: [
         [
-          {classes: "", text: "In February 2022, I obtained a bachelor’s degree in computer science from the Faculty of Electronics and Information Technology at the "},
+          {classes: "", text: "In February 2022, I obtained a bachelor's degree in computer science from the Faculty of Electronics and Information Technology at the "},
           {classes: "font-semibold text-sky-400", text: "Warsaw University of Technology"},
-          {classes: "", text: ", where I am currently continuing my studies at the master’s level."},
+          {classes: "", text: ", where I am currently continuing my studies at the master's level."},
         ]
       ],
     },
@@ -61,7 +62,14 @@
       ]
     },
   ]
+
+  let imagesData = [
+    {title: "Tropical Village", description: "This is the first artwork that I used a mix of 2D and 3D to create.", link: "https://www.artstation.com/artwork/zOGROZ", imgUrl: "https://cdna.artstation.com/p/assets/images/images/037/256/498/large/arkadiusz-areckt-dawid-tropical-village-final.jpg?1619903882"},
+    {title: "Into the Light", description: "The Light always awakens with the last breath.", link: "https://www.artstation.com/artwork/Oo0KN6", imgUrl: "https://cdna.artstation.com/p/assets/images/images/037/268/700/large/arkadiusz-areckt-dawid-into-the-light-final.jpg?1619952349"},
+    {title: "Temple at the Edge of the World", description: "A temple at the edge of the world. Few knew about this ancient place. Even fewer had seen it with their eyes.", link: "https://www.artstation.com/artwork/EL0dmK", imgUrl: "https://cdnb.artstation.com/p/assets/images/images/037/268/549/large/arkadiusz-areckt-dawid-temple-at-the-edhe-of-the-world-final.jpg?1619951776"},
+  ]
 </script>
+
 
 <main class="flex flex-col flex-1 p-4">
   <section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
@@ -73,7 +81,7 @@
       <p class="text-base sm:text-lg md:text-xl">
         My <span class="text-sky-400">favorite tech</span> includes JavaScript, Vue.js, React.js, and TailwindCSS!
       </p>
-      <a href="https://www.linkedin.com/in/adawid/" target="_blank" rel="noopener"  class="blueShadow antialiasing mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 duration-300 hover:scale-[108%]">
+      <a href="https://www.linkedin.com/in/adawid/" target="_blank" rel="noopener noreferrer"  class="blueShadow antialiasing mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 duration-300 hover:scale-[108%]">
         <h4 class="relative z-9">Get in touch &rarr;</h4>
       </a>
     </div>
@@ -89,11 +97,11 @@
       <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">Curious to <span class="poppins text-sky-400">see</span> my work?</h3>
     </div>
     <div class="flex flex-col gap-4 -mb-4 sm:-mb-0 -mt-10">
-      <a href="https://github.com/areckt" target="_blank" rel="noopener" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm">
+      <a href="https://github.com/areckt" target="_blank" rel="noopener noreferrer" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm">
         <i class="fa-brands fa-github"></i>
         <p>Check out my GitHub profile</p>
       </a>
-      <a href="https://codepen.io/areckt" target="_blank" rel="noopener" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm">
+      <a href="https://codepen.io/areckt" target="_blank" rel="noopener noreferrer" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm">
         <i class="fa-brands fa-codepen"></i>
         <p>Check out my CodePen profile</p>
       </a>
@@ -103,7 +111,7 @@
         <p>Platform for the hottest polls created in <strong class="text-sky-400">Java</strong> and <strong class="text-sky-400">React.js</strong>. HotPoll is a voting platform inspired by Reditt and Twitter. The main goal of this app is to quickly share polls all around the world. It also allows to vote and check whether your side of conflict is winning 😉. Project created for a university course.</p>
       </Step>
       <Step step={steps[1]}>
-        <p>15 simple React projects based on a <a href="https://youtu.be/a_7Z7C_JCyo" target="_blank" rel="noopener" class="underline decoration-sky-400 hover:decoration-sky-300">
+        <p>15 simple React projects based on a <a href="https://youtu.be/a_7Z7C_JCyo" target="_blank" rel="noopener noreferrer" class="underline decoration-sky-400 hover:decoration-sky-300">
           <strong class="text-sky-400 hover:text-sky-300">course by John Smilga</strong>.
         </a></p>
       </Step>
@@ -112,6 +120,8 @@
       </Step>
     </div>
   </section>
+  
+  
   <section id="about" class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 realtive">
     <div class="flex flex-col gap-2 text-center relative py-4 before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-sky-700 before:rounded-full after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-sky-700 after:rounded-full">
       <h6 class="text-lg sm:text-xl md:text-2xl">Want to know more?</h6>
@@ -136,6 +146,25 @@
         </div>
       </div>
       {/each}
+    </div>
+  </section>
+
+
+  <section id="artworks" class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 realtive">
+    <div class="flex flex-col gap-2 text-center relative py-4 before:absolute before:top-0 before:right-0 before:w-2/3 before:h-1.5 before:bg-sky-700 before:rounded-full after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1.5 after:bg-sky-700 after:rounded-full">
+      <h6 class="text-lg sm:text-xl md:text-2xl">Want to see more?</h6>
+      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">Take a look at <span class="poppins text-sky-400">some</span> of my artworks!</h3>
+    </div>
+    <div class="flex flex-col gap-4">
+      <div class="grid gap-4 p-4 w-full mx-auto lg:grid-cols-3">
+        {#each imagesData as imgData, index}
+        <ImageCard imgData={imgData} />
+        {/each}
+      </div>
+      <a href="https://areckt.artstation.com/" target="_blank" rel="noopener noreferrer" class="mx-auto px-4 py-2 -mb-4 sm:-mb-0 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm">
+        <i class="fa-brands fa-artstation"></i>
+        <p>Check out my ArtStation profile</p>
+      </a>
     </div>
   </section>
 </main>
