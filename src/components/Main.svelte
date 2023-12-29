@@ -81,7 +81,7 @@
       <p class="text-base sm:text-lg md:text-xl">
         My <span class="text-sky-400">favorite tech</span> includes JavaScript, Vue.js, React.js, and TailwindCSS!
       </p>
-      <a href="https://www.linkedin.com/in/adawid/" target="_blank" rel="noopener noreferrer"  class="blueShadow antialiasing mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 duration-300 hover:scale-[108%]">
+      <a href="https://www.linkedin.com/in/adawid/" target="_blank" rel="noopener noreferrer"  class="blueShadow antialiasing mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 duration-300 hover:scale-[108%] focus:ring-4 focus:ring-sky-700">
         <h4 class="relative z-9">Get in touch &rarr;</h4>
       </a>
     </div>
@@ -97,11 +97,11 @@
       <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">Curious to <span class="poppins text-sky-400">see</span> my work?</h3>
     </div>
     <div class="flex flex-col gap-4 -mb-4 sm:-mb-0 -mt-10">
-      <a href="https://github.com/areckt" target="_blank" rel="noopener noreferrer" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm">
+      <a href="https://github.com/areckt" target="_blank" rel="noopener noreferrer" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm focus:ring-4 focus:ring-sky-700">
         <i class="fa-brands fa-github"></i>
         <p>Check out my GitHub profile</p>
       </a>
-      <a href="https://codepen.io/areckt" target="_blank" rel="noopener noreferrer" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm">
+      <a href="https://codepen.io/areckt" target="_blank" rel="noopener noreferrer" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm focus:ring-4 focus:ring-sky-700">
         <i class="fa-brands fa-codepen"></i>
         <p>Check out my CodePen profile</p>
       </a>
@@ -161,7 +161,7 @@
         <ImageCard imgData={imgData} />
         {/each}
       </div>
-      <a href="https://areckt.artstation.com/" target="_blank" rel="noopener noreferrer" class="mx-auto px-4 py-2 -mb-4 sm:-mb-0 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm">
+      <a href="https://areckt.artstation.com/" target="_blank" rel="noopener noreferrer" class="mx-auto px-4 py-2 -mb-4 sm:-mb-0 rounded-md border border-solid border-white flex items-center gap-2 hover:border-sky-700 duration-200 backdrop-blur-sm focus:ring-4 focus:ring-sky-700">
         <i class="fa-brands fa-artstation"></i>
         <p>Check out my ArtStation profile</p>
       </a>

@@ -4,7 +4,8 @@
 
 <a href={imgData.link} target="_blank" rel="noopener noreferrer" class="d_card" style="--img-url: url({imgData.imgUrl})">
   <div class="content">
-    <p class="data-content"><span class="poppins font-semibold text-2xl">{imgData.title}</span><br />{imgData.description}</p>
+    <h2 class="heading">{imgData.title}</h2>
+    <p class="data-content">{imgData.description}</p> 
   </div>
 </a>
 
@@ -16,6 +17,7 @@
 
 .d_card,
 .content,
+.heading,
 .data-content {
   box-sizing: border-box;
 }
@@ -36,7 +38,6 @@
   border-radius: 15px;
   transition: box-shadow calc(var(--d) * 1.5) var(--e);
 }
-
 .d_card:before {
   content: "";
   position: absolute;
@@ -48,6 +49,7 @@
   background-size: cover;
   background-position: 50% 50%;
   transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
 }
 .d_card:after {
   content: "";
@@ -57,6 +59,7 @@
   left: 0;
   width: 100%;
   height: 200%;
+  pointer-events: none;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -87,13 +90,22 @@
   align-items: center;
   width: 100%;
   padding: 1rem;
-  /* transition: transform var(--d) var(--e); */
+  transition: transform var(--d) var(--e);
   z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Poppins';
+  line-height: 1.2;
 }
 
 .data-content {
   font-size: 1.125rem;
-  font-family: 'Roboto';
   line-height: 1.35;
 }
 
@@ -103,13 +115,17 @@
   }
 
   .content {
-    transform: translateY(calc(20%));
+    transform: translateY(calc(100% - 4.5rem));
+    transition: transform var(--d) var(--e);
+  }
+  .content > *:not(.heading) {
     opacity: 0.5;
+    transform: translateY(2rem);
     transition: transform var(--d) var(--e), opacity var(--d) var(--e);
   }
+
   .d_card:hover,
   .d_card:focus-within {
-    /* align-items: center; */
     box-shadow: 0px 1px 4px 1px rgb(125, 211, 252),
     0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
     0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
@@ -126,20 +142,13 @@
   }
   .d_card:hover .content,
   .d_card:focus-within .content {
-    transform: translateY(0rem);
-    transition: transform var(--d) var(--e);
+    transform: translateY(-1rem);
   }
-  .d_card:hover .content,
-  .d_card:focus-within .content {
+  .d_card:hover .content > *:not(.heading),
+  .d_card:focus-within .content > *:not(.heading) {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  .d_card:focus-within:before,
-  .d_card:focus-within:after,
-  .d_card:focus-within .content,
-  .d_card:focus-within .content > *:not(.heading) {
-    transition-duration: 0s;
+    transition-delay: calc(var(--d) / 8);
   }
 }
 
