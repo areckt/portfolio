@@ -116,7 +116,7 @@
         </a></p>
       </Step>
       <Step step={steps[2]}>
-        <p>A tool for conducting performance tests of two libraries for 3D animation in browser-based GUIs: <strong class="text-sky-400 hover:text-sky-300">Three.js</strong> vs <strong class="text-sky-400 hover:text-sky-300">Babylon.js</strong>. Project created for my engineering thesis.</p>
+        <p>A tool for conducting performance tests of two libraries for 3D animation in browser-based GUIs: <strong class="text-sky-400">Three.js</strong> vs <strong class="text-sky-400">Babylon.js</strong>. Project created for my engineering thesis.</p>
       </Step>
     </div>
   </section>

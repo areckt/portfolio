@@ -119,7 +119,7 @@
     transition: transform var(--d) var(--e);
   }
   .content > *:not(.heading) {
-    opacity: 0.5;
+    opacity: 0.0;
     transform: translateY(2rem);
     transition: transform var(--d) var(--e), opacity var(--d) var(--e);
   }
